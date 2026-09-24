@@ -15,6 +15,7 @@ import {
   runtimeHours,
   verdictCopy,
 } from './calc.js';
+import { closeAppPromo, initAppDemo, initAppPromo } from './app-promo.js';
 import { MAX_CUSTOM, decodePlan, encodePlan } from './plan-link.js';
 
 document.documentElement.classList.add('js');
@@ -460,6 +461,8 @@ function update() {
   drawRuntime(p);
   syncDock();
   if (!quiet) {
+    // Someone is building a plan: the app card has had its moment.
+    if (state.rows.length) closeAppPromo();
     clearTimeout(announceTimer);
     announceTimer = setTimeout(() => announce(p), 700);
   }
@@ -489,6 +492,7 @@ let planInView = false;
 
 function syncDock() {
   const on = chipsInView && !planInView && state.rows.length > 0;
+  if (on) closeAppPromo();
   const dock = $('dock');
   dock.classList.toggle('is-on', on);
   dock.toggleAttribute('inert', !on);
@@ -819,6 +823,8 @@ function init() {
   quiet = false;
   watchDock();
   revealArt();
+  initAppDemo(reduceMotion);
+  initAppPromo(reduceMotion);
 }
 
 init();

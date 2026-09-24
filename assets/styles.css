@@ -1910,7 +1910,7 @@ h2 {
 .app-card {
   position: relative;
   display: grid;
-  gap: 18px;
+  gap: 30px;
   align-items: center;
   overflow: hidden;
   padding: clamp(22px, 4vw, 36px);
@@ -1923,11 +1923,18 @@ h2 {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
-@media (min-width: 780px) {
+@media (min-width: 860px) {
   .app-card {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(36px, 5vw, 72px);
+    padding-block: clamp(28px, 4vw, 44px);
   }
+}
+
+.app-main {
+  display: grid;
+  gap: 18px;
+  align-content: center;
 }
 
 .app-icon {
@@ -1964,6 +1971,80 @@ h2 {
 .app-btn {
   justify-self: start;
   white-space: nowrap;
+}
+
+/* The demo: the promo film in a phone-shaped frame, played only while on screen. */
+
+.app-demo {
+  justify-self: center;
+  width: min(100%, 272px);
+}
+
+@media (min-width: 860px) {
+  .app-demo {
+    width: 292px;
+  }
+}
+
+.app-demo-frame {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 30px;
+  background: var(--ink);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 0 0 7px rgba(255, 255, 255, 0.03),
+    0 40px 80px -30px rgba(0, 0, 0, 0.95),
+    0 30px 90px -40px rgba(232, 184, 109, 0.55);
+}
+
+.app-demo-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.app-demo-toggle {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(11, 15, 20, 0.66);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.app-demo-toggle .ico {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke: none;
+}
+
+@media (hover: hover) {
+  .app-demo-toggle:hover {
+    background: rgba(11, 15, 20, 0.86);
+  }
+}
+
+.app-demo-cap {
+  max-width: 34ch;
+  margin: 14px auto 0;
+  color: var(--subtle);
+  font-size: 13.5px;
+  line-height: 1.45;
+  text-align: center;
 }
 
 /* Explainers */
@@ -2596,6 +2677,213 @@ details[open] > summary .chev {
 
 .toast-btn[hidden] {
   display: none;
+}
+
+/* -------------------------------------------------------------- app promo */
+
+/* A small card, never a full-screen interstitial: it leaves the calculator in
+   view on a phone and sits in the corner on a desktop. */
+.app-promo {
+  position: fixed;
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  left: 12px;
+  z-index: 55;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  max-width: 440px;
+  margin-inline: auto;
+  padding: 12px 14px 12px 12px;
+  border-radius: 24px;
+  border: 1px solid rgba(232, 184, 109, 0.3);
+  background:
+    radial-gradient(320px 180px at 0% 0%, rgba(232, 184, 109, 0.2), transparent 70%),
+    rgba(16, 22, 30, 0.9);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow:
+    0 30px 60px -18px rgba(0, 0, 0, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(calc(100% + 28px));
+  transition:
+    transform 0.55s var(--ease),
+    opacity 0.3s,
+    visibility 0s 0.55s;
+}
+
+.app-promo.is-on {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    transform 0.55s var(--ease),
+    opacity 0.3s,
+    visibility 0s;
+}
+
+@media (min-width: 980px) {
+  .app-promo {
+    right: 28px;
+    bottom: 28px;
+    left: auto;
+    width: 420px;
+    margin: 0;
+    gap: 16px;
+    padding: 14px 16px 14px 14px;
+  }
+}
+
+.app-promo-peek {
+  position: relative;
+  display: block;
+  width: 76px;
+  aspect-ratio: 216 / 468;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--ink);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.16),
+    0 16px 30px -14px rgba(0, 0, 0, 0.95);
+}
+
+@media (max-height: 700px) {
+  .app-promo-peek {
+    width: 62px;
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 980px) {
+  .app-promo-peek {
+    width: 88px;
+  }
+}
+
+.app-promo-peek video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* "Demo" chip: appears once the clip has shown the answer. */
+.app-promo-watch {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px 4px 7px;
+  border-radius: 999px;
+  background: rgba(11, 15, 20, 0.78);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  transition:
+    opacity 0.3s,
+    transform 0.4s var(--ease);
+}
+
+.app-promo-watch .ico {
+  width: 10px;
+  height: 10px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.app-promo.is-ended .app-promo-watch {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.app-promo-body {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  padding-right: 22px;
+}
+
+.app-promo-k {
+  color: var(--amber);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.app-promo-title {
+  font-size: 16.5px;
+  font-weight: 720;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.app-promo-sub {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.38;
+}
+
+.app-promo-btn {
+  justify-self: start;
+  min-height: 40px;
+  margin-top: 6px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.app-promo-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+/* A 44 px touch target around the 32 px circle. */
+.app-promo-close::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+
+.app-promo-close .ico {
+  width: 16px;
+  height: 16px;
+}
+
+@media (hover: hover) {
+  .app-promo-close:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--text);
+  }
+}
+
+@media (max-width: 359px) {
+  .app-promo-sub {
+    display: none;
+  }
 }
 
 /* ------------------------------------------------------------ small phones */
