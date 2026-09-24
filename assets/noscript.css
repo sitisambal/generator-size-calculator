@@ -1,0 +1,15 @@
+/* Only loaded when JavaScript is off: hide controls that cannot work, keep the
+   hand-sizing note, explainers, watts table, safety and FAQ. */
+.kits,
+.custom,
+.list,
+.plan,
+.ps,
+.dock,
+.toast {
+  display: none !important;
+}
+
+.calc-grid {
+  grid-template-columns: 1fr !important;
+}

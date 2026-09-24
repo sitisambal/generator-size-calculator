@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>What Size Generator Do I Need? Generator Size Calculator</title>
+  <meta name="description" content="Tap what you will run to see your running watts, starting watts and the generator size to buy. Plus a power station runtime calculator. Private, no sign-up.">
+  <link rel="canonical" href="https://sitisambal.github.io/generator-size-calculator/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0B0F14">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-itunes-app" content="app-id=6803647183">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Generator Size Calculator">
+  <meta property="og:title" content="What size generator do I need?">
+  <meta property="og:description" content="Tap what you will run. See running watts, the starting kick and the size to buy. Plus power station runtime.">
+  <meta property="og:url" content="https://sitisambal.github.io/generator-size-calculator/">
+  <meta property="og:image" content="https://sitisambal.github.io/generator-size-calculator/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Generator size calculator showing running watts, starting watts and the generator size to buy.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+  <noscript><link rel="stylesheet" href="assets/noscript.css"></noscript>
+  <link rel="modulepreload" href="assets/calc.js">
+  <link rel="modulepreload" href="assets/appliances.js">
+  <link rel="modulepreload" href="assets/plan-link.js">
+  <script type="module" src="assets/app.js"></script>
+
+  <!-- faq-jsonld:start -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What size generator do I need to run a fridge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical fridge runs on about 200 W but needs about 1,200 W for a second or two when its compressor starts. On its own, that means a generator label showing at least 300 W running and 1,200 W starting. Add a freezer, LED lights, Wi-Fi and a phone charger and it comes to 485 W running and 1,485 W at peak: at least 700 W running and 1,500 W starting. Check the starting number on the label, because some small generators start less than that. Older fridges can need more to start."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What size generator do I need to run a house?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on what you run at the same time, not on the size of the house. Outage essentials (fridge, freezer, LED lights, Wi-Fi, phone charging, a CPAP and a sump pump) come to 1,345 W running and 2,345 W at peak: at least 1,700 W running and 2,400 W starting. Add a furnace fan, a well pump and a microwave and it’s 3,945 W running and 5,045 W at peak: at least 5,000 W running and 5,100 W starting. Central air, an electric range, a dryer or an electric water heater can push you past the biggest common portables, which run about 12,000 to 16,000 W. That is home standby size, so have a licensed electrician size and install it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What size generator do I need for a 30 amp RV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 30 amp RV hookup can deliver up to 3,600 W (30 amps × 120 volts). Most 30 amp rigs have one air conditioner, and its start is the hard part: about 1,600 W running but about 3,500 W to start. The AC plus LED lights, a TV, a laptop and a phone charger comes to 1,870 W running and 3,770 W at peak: at least 2,400 W running and 3,800 W starting. Many “2,000 W” inverters start at about 2,000 W, so one alone won’t start that AC. A soft start fitted to the AC lowers its starting kick. If you have one, add the AC as your own item with its new numbers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many watts do I need to run a house during a power outage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Count only what runs at the same time. Typical outage essentials: a fridge about 200 W, a freezer 180 W, LED lights 80 W, Wi-Fi 15 W, phone charging 10 W, a CPAP 60 W and a sump pump 800 W. That is 1,345 W running. Then add the single biggest starting kick, here the fridge at 1,000 W extra, for a 2,345 W peak. Start the biggest motor first, then switch the rest on one at a time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What size generator do I need for a sump pump or a well pump?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical sump pump runs on about 800 W and needs about 1,300 W to start: at least 1,000 W running and 1,300 W starting. A typical well pump runs on about 1,000 W and needs about 2,100 W to start: at least 1,300 W running and 2,100 W starting. Both together need at least 2,300 W running and 2,900 W starting. Pumps vary, and older ones can need more to start, so check the label. Many well pumps run on 240 volts and are hardwired, which means a generator with a 240 V outlet and a transfer switch or interlock installed by an electrician."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long will a portable power station run a CPAP or a fridge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Runtime is capacity × about 85% ÷ load. A 1,024 Wh power station runs a 60 W CPAP for about 14 h 30 min, or a fridge drawing 200 W nonstop for about 4 h 20 min. Fridges cycle on and off, so real runtime is usually longer. Turning off a CPAP’s heated humidifier usually stretches runtime a lot. The station must also handle the start: a fridge needs about 1,200 W for a moment, so check its surge rating."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why add only the biggest starting watts, not all of them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Starting kicks last a second or two, and motors rarely start at the exact same moment. Adding every kick would size for a moment that rarely happens. The catch: two motors can occasionally start together, like a fridge and a sump pump. If your generator trips when that happens, give yourself more starting headroom, or stagger what you can."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- faq-jsonld:end -->
+</head>
+<body>
+<!-- sprite:start -->
+<svg class="sprite" aria-hidden="true" focusable="false"><!-- Icons: Lucide, ISC License, https://lucide.dev --><symbol id="i-refrigerator" viewBox="0 0 24 24"><path d="M5 6a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6Z"/><path d="M5 10h14"/><path d="M15 7v6"/></symbol><symbol id="i-snowflake" viewBox="0 0 24 24"><path d="m10 20-1.25-2.5L6 18"/><path d="M10 4 8.75 6.5 6 6"/><path d="m14 20 1.25-2.5L18 18"/><path d="m14 4 1.25 2.5L18 6"/><path d="m17 21-3-6h-4"/><path d="m17 3-3 6 1.5 3"/><path d="M2 12h6.5L10 9"/><path d="m20 10-1.5 2 1.5 2"/><path d="M22 12h-6.5L14 15"/><path d="m4 10 1.5 2L4 14"/><path d="m7 21 3-6-1.5-3"/><path d="m7 3 3 6h4"/></symbol><symbol id="i-thermometer-snowflake" viewBox="0 0 24 24"><path d="m10 20-1.25-2.5L6 18"/><path d="M10 4 8.75 6.5 6 6"/><path d="M10.585 15H10"/><path d="M2 12h6.5L10 9"/><path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/><path d="m4 10 1.5 2L4 14"/><path d="m7 21 3-6-1.5-3"/><path d="m7 3 3 6h2"/></symbol><symbol id="i-microwave" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="4" rx="2"/><rect width="8" height="7" x="6" y="8" rx="1"/><path d="M18 8v7"/><path d="M6 19v2"/><path d="M18 19v2"/></symbol><symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></symbol><symbol id="i-glass-water" viewBox="0 0 24 24"><path d="M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z"/><path d="M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0"/></symbol><symbol id="i-sandwich" viewBox="0 0 24 24"><path d="m2.37 11.223 8.372-6.777a2 2 0 0 1 2.516 0l8.371 6.777"/><path d="M21 15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-5.25"/><path d="M3 15a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9"/><path d="m6.67 15 6.13 4.6a2 2 0 0 0 2.8-.4l3.15-4.2"/><rect width="20" height="4" x="2" y="11" rx="1"/></symbol><symbol id="i-chef-hat" viewBox="0 0 24 24"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></symbol><symbol id="i-egg-fried" viewBox="0 0 24 24"><circle cx="11.5" cy="12.5" r="3.5"/><path d="M3 8c0-3.5 2.5-6 6.5-6 5 0 4.83 3 7.5 5s5 2 5 6c0 4.5-2.5 6.5-7 6.5-2.5 0-2.5 2.5-6 2.5s-7-2-7-5.5c0-3 1.5-3 1.5-5C3.5 10 3 9 3 8Z"/></symbol><symbol id="i-cooking-pot" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4"/><path d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></symbol><symbol id="i-heater" viewBox="0 0 24 24"><path d="M11 8c2-3-2-3 0-6"/><path d="M15.5 8c2-3-2-3 0-6"/><path d="M6 10h.01"/><path d="M6 14h.01"/><path d="M10 16v-4"/><path d="M14 16v-4"/><path d="M18 16v-4"/><path d="M20 6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3"/><path d="M5 20v2"/><path d="M19 20v2"/></symbol><symbol id="i-air-vent" viewBox="0 0 24 24"><path d="M18 17.5a2.5 2.5 0 1 1-4 2.03V12"/><path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 8h12"/><path d="M6.6 15.572A2 2 0 1 0 10 17v-5"/></symbol><symbol id="i-caravan" viewBox="0 0 24 24"><path d="M18 19V9a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8a2 2 0 0 0 2 2h2"/><path d="M2 9h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2"/><path d="M22 17v1a1 1 0 0 1-1 1H10v-9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v9"/><circle cx="8" cy="19" r="2"/></symbol><symbol id="i-fan" viewBox="0 0 24 24"><path d="M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"/><path d="M12 12v.01"/></symbol><symbol id="i-droplets" viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></symbol><symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></symbol><symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0"/><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0"/><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0"/></symbol><symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol><symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></symbol><symbol id="i-smartphone-charging" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12.667 8 10 12h4l-2.667 4"/></symbol><symbol id="i-laptop" viewBox="0 0 24 24"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"/><path d="M20.054 15.987H3.946"/></symbol><symbol id="i-tv" viewBox="0 0 24 24"><path d="m17 2-5 5-5-5"/><rect width="20" height="15" x="2" y="7" rx="2"/></symbol><symbol id="i-satellite-dish" viewBox="0 0 24 24"><path d="M18 12a6 6 0 00-6-6"/><path d="M2.824 10.459a8 8 0 0010.717 10.717c.558-.276.623-1.012.183-1.452l-9.448-9.448c-.44-.44-1.176-.375-1.452.183"/><path d="M22 12A10 10 0 0012 2"/><path d="m9 15 4-4"/></symbol><symbol id="i-wind" viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></symbol><symbol id="i-heart-pulse" viewBox="0 0 24 24"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol><symbol id="i-warehouse" viewBox="0 0 24 24"><path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11"/><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z"/><path d="M6 13h12"/><path d="M6 17h12"/></symbol><symbol id="i-flashlight" viewBox="0 0 24 24"><path d="M12 13v1"/><path d="M17 2a1 1 0 0 1 1 1v4a3 3 0 0 1-.6 1.8l-.6.8A4 4 0 0 0 16 12v8a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-8a4 4 0 0 0-.8-2.4l-.6-.8A3 3 0 0 1 6 7V3a1 1 0 0 1 1-1z"/><path d="M6 6h12"/></symbol><symbol id="i-disc-3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M6 12c0-1.7.7-3.2 1.8-4.2"/><circle cx="12" cy="12" r="2"/><path d="M18 12c0 1.7-.7 3.2-1.8 4.2"/></symbol><symbol id="i-drill" viewBox="0 0 24 24"><path d="M10 18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3 1 1 0 0 1 1-1z"/><path d="M13 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1l-.81 3.242a1 1 0 0 1-.97.758H8"/><path d="M14 4h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3"/><path d="M18 6h4"/><path d="m5 10-2 8"/><path d="m7 18 2-8"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol><symbol id="i-cloud-lightning" viewBox="0 0 24 24"><path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/><path d="m13 12-3 5h4l-3 5"/></symbol><symbol id="i-tent" viewBox="0 0 24 24"><path d="M3.5 21 14 3"/><path d="M20.5 21 10 3"/><path d="M15.5 21 12 15l-3.5 6"/><path d="M2 21h20"/></symbol><symbol id="i-construction" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/></symbol><symbol id="i-zap" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-trash-2" viewBox="0 0 24 24"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol><symbol id="i-share-2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></symbol><symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol><symbol id="i-external-link" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol><symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></symbol><symbol id="i-battery-charging" viewBox="0 0 24 24"><path d="m11 7-3 5h4l-3 5"/><path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935"/><path d="M22 14v-4"/><path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936"/></symbol><symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol><symbol id="i-house-plug" viewBox="0 0 24 24"><path d="M10 12V8.964"/><path d="M14 12V8.964"/><path d="M15 12a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z"/><path d="M8.5 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-2"/></symbol><symbol id="i-zap-off" viewBox="0 0 24 24"><path d="M10.768 5.111 13.44 2.44a1.5 1.5 0 012.474 1.561l-1.633 4.625"/><path d="m18.889 13.232.672-.672A1.5 1.5 0 0018.5 10h-2.844"/><path d="m2 2 20 20"/><path d="m7.94 7.94-3.5 3.499A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l5.5-5.5"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5"/><path d="M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16"/><path d="M2 21h13"/><path d="M3 9h11"/></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol></svg>
+<!-- sprite:end -->
+
+<a class="skip" href="#calculator">Skip to the calculator</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-zap"/></svg></span>
+      <span class="brand-name">Generator Size <span>Calculator</span></span>
+    </a>
+    <nav class="nav" aria-label="On this page">
+      <a href="#power-station" class="nav-wide">Power station</a>
+      <a href="#how" class="nav-wide">How it works</a>
+      <a href="#safety">Safety</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="title">
+    <p class="eyebrow">Free calculator · No sign-up</p>
+    <h1 id="title">What size generator do I&nbsp;need?</h1>
+    <p class="lede">Tap everything you want running at the same time. You’ll see your running watts, the biggest starting kick, and the size to buy.</p>
+    <ul class="trust">
+      <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Nothing you type leaves this page</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Every number shown, nothing hidden</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg>Made for power outages</li>
+    </ul>
+  </section>
+
+  <section id="calculator" class="calc wrap" aria-labelledby="calc-title" tabindex="-1">
+    <h2 id="calc-title" class="visually-hidden">Generator size calculator</h2>
+    <div class="calc-grid">
+      <div class="picker">
+        <div class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <div>
+            <h3 class="step-title">What will run at the same time?</h3>
+            <p class="step-sub">Tap to add, tap again to remove. Set how many in your list.</p>
+          </div>
+        </div>
+
+        <div class="kits" role="group" aria-labelledby="kits-label">
+          <span class="kits-label" id="kits-label">Quick start</span>
+          <div class="kits-row" id="kits"></div>
+        </div>
+
+        <div id="groups" class="groups"></div>
+
+        <noscript>
+          <p class="noscript">The calculator needs JavaScript. You can still size by hand: add the running watts of everything that runs at once (see “Typical watts we use” below), add the single biggest extra starting kick, then pick a generator whose running rating is at least your running total ÷ 0.8 and whose starting rating covers your peak.</p>
+        </noscript>
+
+        <div class="custom">
+          <button type="button" class="custom-toggle" id="custom-toggle" aria-expanded="false" aria-controls="custom-form">
+            <svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>
+            <span>Add your own</span>
+            <small>Something not listed? Use its label.</small>
+          </button>
+          <form id="custom-form" class="custom-form" hidden novalidate>
+            <div class="field field-name">
+              <label for="c-name">Name</label>
+              <input id="c-name" name="name" type="text" autocomplete="off" maxlength="40" placeholder="Shop fridge" enterkeyhint="next">
+            </div>
+            <div class="field">
+              <label for="c-run">Running watts</label>
+              <div class="input-unit"><input id="c-run" name="running" type="text" inputmode="numeric" autocomplete="off" placeholder="250" enterkeyhint="next"><span aria-hidden="true">W</span></div>
+            </div>
+            <div class="field">
+              <label for="c-start">Starting watts <span class="opt">optional</span></label>
+              <div class="input-unit"><input id="c-start" name="starting" type="text" inputmode="numeric" autocomplete="off" placeholder="1,200" enterkeyhint="done" aria-describedby="c-hint"><span aria-hidden="true">W</span></div>
+            </div>
+            <p class="hint" id="c-hint">Look on the label or in the manual. Only amps? Amps × 120 is a rough watt figure in the US and Canada. Leave starting blank if it has no motor.</p>
+            <p class="form-error" id="c-error" role="alert"></p>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-amber">Add to list</button>
+              <button type="button" class="btn btn-ghost" id="custom-cancel">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <section class="list" aria-labelledby="list-title">
+          <div class="list-head">
+            <h3 id="list-title">Your list <span class="count" id="list-count"></span></h3>
+            <button type="button" class="link-btn" id="clear" hidden>Start over</button>
+          </div>
+          <p class="list-empty" id="list-empty">Nothing yet. Tap what you’d run during an outage, a camping trip or a job.</p>
+          <ul class="list-items" id="list"></ul>
+        </section>
+      </div>
+
+      <aside class="plan" id="plan" aria-labelledby="plan-title" tabindex="-1">
+        <div class="plan-card">
+          <div class="plan-glow" aria-hidden="true"></div>
+          <div class="step step-plan">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h2 class="step-title" id="plan-title">Your generator size</h2>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-label">Running</span>
+              <span class="stat-value"><span class="num" data-num="running">0</span><span class="unit">W</span></span>
+              <span class="stat-sub">all at once</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Start kick</span>
+              <span class="stat-value"><span class="plus">+</span><span class="num" data-num="kick">0</span><span class="unit">W</span></span>
+              <span class="stat-sub" id="kick-from">no motors yet</span>
+            </div>
+            <div class="stat stat-peak">
+              <span class="stat-label">Peak</span>
+              <span class="stat-value"><span class="num" data-num="peak">0</span><span class="unit">W</span></span>
+              <span class="stat-sub">running + kick</span>
+            </div>
+          </div>
+
+          <div class="buy" id="buy" data-state="empty">
+            <p class="kicker">Size to buy</p>
+            <p class="buy-empty">Add what you’ll run and the size shows up here.</p>
+            <p class="buy-line">At least <strong class="nowrap"><span class="num" data-num="needRun">0</span>&nbsp;W</strong> running and <strong class="nowrap"><span class="num" data-num="needStart">0</span>&nbsp;W</strong> starting.</p>
+            <p class="buy-class" id="buy-class">Look for both numbers on the generator label.</p>
+            <div class="meter" id="meter" data-tone="good">
+              <div class="meter-top">
+                <span id="meter-label">Load on this size</span>
+                <span class="meter-pct" id="meter-pct">0%</span>
+              </div>
+              <div class="meter-track" id="meter-track" role="img" aria-label="Load meter">
+                <div class="meter-fill" id="meter-fill"></div>
+                <div class="meter-mark" aria-hidden="true"></div>
+              </div>
+              <div class="meter-scale" aria-hidden="true"><span>0</span><span class="meter-80">80%</span><span>100%</span></div>
+            </div>
+            <p class="buy-note">Uses typical watts. Older fridges and pumps can need more to start. Many “2,000&nbsp;W” inverters run only about 1,600&nbsp;W, so read the label, not the model name.</p>
+          </div>
+
+          <fieldset class="own">
+            <legend>Already have a generator?</legend>
+            <p class="own-hint">Type the two numbers on its sticker.</p>
+            <div class="own-fields">
+              <div class="field">
+                <label for="g-run">Running watts</label>
+                <div class="input-unit"><input id="g-run" type="text" inputmode="numeric" autocomplete="off" placeholder="3,000" aria-describedby="g-run-hint"><span aria-hidden="true">W</span></div>
+                <small id="g-run-hint">The smaller number</small>
+              </div>
+              <div class="field">
+                <label for="g-start">Starting watts</label>
+                <div class="input-unit"><input id="g-start" type="text" inputmode="numeric" autocomplete="off" placeholder="3,500" aria-describedby="g-start-hint"><span aria-hidden="true">W</span></div>
+                <small id="g-start-hint">The bigger one, if shown</small>
+              </div>
+            </div>
+            <label class="check"><input type="checkbox" id="g-parallel"><span class="check-box" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span><span>Two of these, linked in parallel</span></label>
+            <div class="verdict" id="verdict" data-tone="muted" hidden>
+              <span class="badge" id="v-badge"></span>
+              <p class="v-title" id="v-title"></p>
+              <p class="v-sub" id="v-sub"></p>
+              <p class="v-start" id="v-start"></p>
+            </div>
+          </fieldset>
+
+          <p class="tip" id="tip" hidden><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span id="tip-text"></span></p>
+
+          <div class="plan-actions">
+            <button type="button" class="btn btn-soft" id="share"><svg class="ico" aria-hidden="true"><use href="#i-share-2"/></svg><span>Share plan</span></button>
+            <button type="button" class="btn btn-soft" id="print"><svg class="ico" aria-hidden="true"><use href="#i-printer"/></svg><span>Print plan</span></button>
+          </div>
+
+          <p class="plan-safety"><svg class="ico" aria-hidden="true"><use href="#i-triangle-alert"/></svg><span>Outdoors only, at least 20&nbsp;feet from windows, doors and vents. <a href="#safety">Read safety</a></span></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="power-station" class="section wrap" aria-labelledby="ps-title">
+    <div class="section-head">
+      <p class="eyebrow">Battery instead of gas</p>
+      <h2 id="ps-title">Portable power station runtime</h2>
+      <p>How long a battery runs your load. Its capacity in watt-hours (Wh) is printed on the box.</p>
+    </div>
+    <div class="ps card">
+      <div class="ps-inputs">
+        <div class="field">
+          <label for="ps-wh">Capacity</label>
+          <div class="input-unit input-lg"><input id="ps-wh" type="text" inputmode="numeric" autocomplete="off" value="1,024"><span aria-hidden="true">Wh</span></div>
+          <div class="presets" role="group" aria-label="Common capacities in watt-hours">
+            <button type="button" data-wh="256">256</button>
+            <button type="button" data-wh="512">512</button>
+            <button type="button" data-wh="1024">1,024</button>
+            <button type="button" data-wh="2048">2,048</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="ps-w">Load</label>
+          <div class="input-unit input-lg"><input id="ps-w" type="text" inputmode="numeric" autocomplete="off" placeholder="60" aria-describedby="ps-linked"><span aria-hidden="true">W</span></div>
+          <p class="ps-link-row">
+            <span class="linked" id="ps-linked" hidden><svg class="ico" aria-hidden="true"><use href="#i-link"/></svg>Following your list</span>
+            <button type="button" class="link-btn" id="ps-use" hidden>Use my list</button>
+            <span class="ps-eg" id="ps-eg">A CPAP is about 60&nbsp;W.</span>
+          </p>
+        </div>
+      </div>
+      <div class="ps-out" id="ps-out" data-state="empty">
+        <p class="kicker">Runs for</p>
+        <p class="ps-time" id="ps-time">Enter a load</p>
+        <p class="ps-math" id="ps-math">Capacity × 85% ÷ load</p>
+        <div class="day" aria-hidden="true">
+          <div class="day-track"><div class="day-fill" id="day-fill"></div></div>
+          <div class="day-scale"><span>0</span><span>6&nbsp;h</span><span>12&nbsp;h</span><span>18&nbsp;h</span><span>24&nbsp;h</span></div>
+        </div>
+        <ul class="ps-notes">
+          <li>Assumes about 85% inverter efficiency. Cold, battery age and loads that cycle on and off change real runtime.</li>
+          <li id="ps-kick">A power station must also cover the starting kick: its output rating has to carry your running watts, and its surge rating your peak.</li>
+          <li id="ps-fridge" hidden>Fridges and freezers cycle on and off, so they usually run longer than this.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="app" class="section wrap" aria-labelledby="app-title">
+    <div class="app-card">
+      <img class="app-icon" src="assets/app-icon.webp" width="96" height="96" alt="" decoding="async">
+      <div class="app-copy">
+        <p class="eyebrow">For iPhone</p>
+        <h2 id="app-title">Plan it offline on your iPhone: Generator Wattage Calculator</h2>
+        <p>Works when the power and internet are out. The same appliances and the same math as this page, with kits for a storm, camping or the jobsite, and a check against the generator you own. Plan up to 4 things at once, or unlock the full plan in the app to plan everything.</p>
+      </div>
+      <a class="btn btn-amber app-btn" href="https://apps.apple.com/app/id6803647183">View on the App Store<svg class="ico" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+    </div>
+  </section>
+
+  <section id="how" class="section wrap" aria-labelledby="how-title">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-title">Four things that decide your size</h2>
+    </div>
+    <div class="explain">
+      <article class="card ex">
+        <h3>Running vs starting watts</h3>
+        <svg class="kick-art" viewBox="0 0 320 132" role="img" aria-labelledby="kick-art-t">
+          <title id="kick-art-t">A motor draws a short spike of power to start, then settles to its running watts.</title>
+          <defs>
+            <linearGradient id="kick-fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E8B86D" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#E8B86D" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path class="kick-grid" d="M16 116H308"/>
+          <path class="kick-area" d="M16 116H40C45 116 47 22 54 22C61 22 62 80 76 82H308V116Z" fill="url(#kick-fill)"/>
+          <path class="kick-line" d="M16 116H40C45 116 47 22 54 22C61 22 62 80 76 82H308"/>
+          <circle class="kick-dot" cx="54" cy="22" r="4"/>
+          <text x="66" y="26" class="kick-t kick-t-amber">Starting kick</text>
+          <text x="66" y="42" class="kick-t">a second or two</text>
+          <text x="306" y="72" class="kick-t" text-anchor="end">Running watts</text>
+          <text x="306" y="130" class="kick-t" text-anchor="end">time</text>
+        </svg>
+        <p>Running watts are what an appliance draws once it’s going. Starting watts are the brief surge a motor needs to get moving, often several times its running watts. Your generator has to cover both.</p>
+      </article>
+
+      <article class="card ex">
+        <h3>The 80% rule</h3>
+        <div class="meter meter-demo" data-tone="good" aria-hidden="true">
+          <div class="meter-top"><span>1,800&nbsp;W on a 2,300&nbsp;W generator</span><span class="meter-pct">78%</span></div>
+          <div class="meter-track"><div class="meter-fill"></div><div class="meter-mark"></div></div>
+          <div class="meter-scale"><span>0</span><span class="meter-80">80%</span><span>100%</span></div>
+        </div>
+        <p>We size so your running load is no more than 80% of the generator’s running rating. It’s a common rule of thumb, not a law: it leaves room for a surprise and is easier on the engine. That’s why 1,800&nbsp;W of load points to at least 2,300&nbsp;W.</p>
+      </article>
+
+      <article class="card ex">
+        <h3>Why motors matter</h3>
+        <ul class="motor-list" aria-label="Typical starting kicks">
+          <li><span>Fridge</span><span>200&nbsp;W running, about 1,200&nbsp;W to start</span></li>
+          <li><span>Sump pump</span><span>800&nbsp;W running, about 1,300&nbsp;W to start</span></li>
+          <li><span>Well pump</span><span>1,000&nbsp;W running, about 2,100&nbsp;W to start</span></li>
+          <li><span>RV air conditioner</span><span>1,600&nbsp;W running, about 3,500&nbsp;W to start</span></li>
+        </ul>
+        <p>Fridges, freezers, pumps, furnace fans and air conditioners have motors or compressors. We add only the single biggest kick to your running total, because motors rarely start at the same instant. Start the biggest one first, then the rest one at a time.</p>
+      </article>
+
+      <article class="card ex">
+        <h3>Read the sticker</h3>
+        <div class="sticker" aria-hidden="true">
+          <div><span class="sticker-k">Starting</span><span class="sticker-v">2,000&nbsp;W</span><span class="sticker-n">often the name on the box</span></div>
+          <div class="sticker-main"><span class="sticker-k">Running</span><span class="sticker-v">1,600&nbsp;W</span><span class="sticker-n">what it runs all day</span></div>
+        </div>
+        <p>Most generators show two numbers. The smaller one is running (rated) watts. The bigger one is starting (surge or peak) watts. Model names don’t follow one rule: many “2,000&nbsp;W” inverters run only about 1,600&nbsp;W. Match your running total to the smaller number and your peak to the bigger one.</p>
+      </article>
+    </div>
+
+    <details class="watts card">
+      <summary><span>Typical watts we use</span><small>32 appliances · planning numbers, real units vary</small><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+      <div class="watts-body">
+        <!-- watts-table:start -->
+        <table class="watts-table">
+          <caption class="visually-hidden">Typical running and starting watts used by this calculator</caption>
+          <thead><tr><th scope="col">Appliance</th><th scope="col">Running</th><th scope="col">Starting</th></tr></thead>
+          <tbody>
+            <tr class="watts-group"><th scope="rowgroup" colspan="3">Kitchen</th></tr>
+            <tr><th scope="row">Fridge</th><td>200 W</td><td>1,200 W</td></tr>
+            <tr><th scope="row">Freezer</th><td>180 W</td><td>1,100 W</td></tr>
+            <tr><th scope="row">Camp fridge</th><td>70 W</td><td>180 W</td></tr>
+            <tr><th scope="row">Microwave</th><td>1,000 W</td><td>1,000 W</td></tr>
+            <tr><th scope="row">Coffee maker</th><td>1,000 W</td><td>1,000 W</td></tr>
+            <tr><th scope="row">Electric kettle</th><td>1,200 W</td><td>1,200 W</td></tr>
+            <tr><th scope="row">Toaster</th><td>900 W</td><td>900 W</td></tr>
+            <tr><th scope="row">Air fryer</th><td>1,500 W</td><td>1,500 W</td></tr>
+            <tr><th scope="row">Electric skillet</th><td>1,250 W</td><td>1,250 W</td></tr>
+            <tr><th scope="row">Induction cooktop</th><td>1,800 W</td><td>1,800 W</td></tr>
+          </tbody>
+          <tbody>
+            <tr class="watts-group"><th scope="rowgroup" colspan="3">Heating &amp; cooling</th></tr>
+            <tr><th scope="row">Furnace fan</th><td>600 W</td><td>1,200 W</td></tr>
+            <tr><th scope="row">Space heater</th><td>1,500 W</td><td>1,500 W</td></tr>
+            <tr><th scope="row">Small window AC</th><td>600 W</td><td>1,800 W</td></tr>
+            <tr><th scope="row">RV air conditioner</th><td>1,600 W</td><td>3,500 W</td></tr>
+            <tr><th scope="row">Box fan</th><td>100 W</td><td>100 W</td></tr>
+            <tr><th scope="row">Dehumidifier</th><td>500 W</td><td>1,200 W</td></tr>
+            <tr><th scope="row">Electric blanket</th><td>180 W</td><td>180 W</td></tr>
+          </tbody>
+          <tbody>
+            <tr class="watts-group"><th scope="rowgroup" colspan="3">Water</th></tr>
+            <tr><th scope="row">Sump pump</th><td>800 W</td><td>1,300 W</td></tr>
+            <tr><th scope="row">Well pump</th><td>1,000 W</td><td>2,100 W</td></tr>
+          </tbody>
+          <tbody>
+            <tr class="watts-group"><th scope="rowgroup" colspan="3">Everyday</th></tr>
+            <tr><th scope="row">LED lights</th><td>80 W</td><td>80 W</td></tr>
+            <tr><th scope="row">Wi-Fi router</th><td>15 W</td><td>15 W</td></tr>
+            <tr><th scope="row">Phone charger</th><td>10 W</td><td>10 W</td></tr>
+            <tr><th scope="row">Laptop</th><td>60 W</td><td>60 W</td></tr>
+            <tr><th scope="row">TV</th><td>120 W</td><td>120 W</td></tr>
+            <tr><th scope="row">Starlink</th><td>75 W</td><td>100 W</td></tr>
+            <tr><th scope="row">Hair dryer</th><td>1,500 W</td><td>1,500 W</td></tr>
+          </tbody>
+          <tbody>
+            <tr class="watts-group"><th scope="rowgroup" colspan="3">Medical</th></tr>
+            <tr><th scope="row">CPAP</th><td>60 W</td><td>60 W</td></tr>
+          </tbody>
+          <tbody>
+            <tr class="watts-group"><th scope="rowgroup" colspan="3">Garage &amp; tools</th></tr>
+            <tr><th scope="row">Garage door</th><td>400 W</td><td>1,400 W</td></tr>
+            <tr><th scope="row">Work light</th><td>80 W</td><td>80 W</td></tr>
+            <tr><th scope="row">Circular saw</th><td>1,400 W</td><td>2,300 W</td></tr>
+            <tr><th scope="row">Angle grinder</th><td>1,400 W</td><td>2,400 W</td></tr>
+            <tr><th scope="row">Air compressor</th><td>1,200 W</td><td>2,000 W</td></tr>
+          </tbody>
+        </table>
+        <!-- watts-table:end -->
+        <p class="hint">Starting is the brief surge for a motor or compressor. Where it equals running, the appliance has no real kick. Check your own labels when you can.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="safety" class="section wrap" aria-labelledby="safety-title">
+    <div class="safety">
+      <div class="safety-head">
+        <span class="safety-icon" aria-hidden="true"><svg class="ico"><use href="#i-triangle-alert"/></svg></span>
+        <div>
+          <p class="eyebrow eyebrow-bad">Read this before you run it</p>
+          <h2 id="safety-title">Generator safety</h2>
+        </div>
+      </div>
+      <ul class="safety-list">
+        <li>
+          <h3>Carbon monoxide can kill in minutes</h3>
+          <p>Never run a generator inside a home, garage, basement, crawl space or shed, even with doors and windows open. Keep it outside, at least 20&nbsp;feet from windows, doors and vents, with the exhaust pointed away. Use battery or battery-backup CO alarms inside.</p>
+        </li>
+        <li>
+          <h3>Feel sick, dizzy or weak?</h3>
+          <p>Get to fresh air right away. Then call 911, or Poison Control at <a href="tel:+18002221222" class="nowrap">1-800-222-1222</a> in the US.</p>
+        </li>
+        <li>
+          <h3>Never backfeed</h3>
+          <p>Plugging a generator into a wall outlet can send power up the utility lines and electrocute line workers and neighbors. It also bypasses your home’s circuit protection.</p>
+        </li>
+        <li>
+          <h3>Home circuits need a transfer switch or interlock</h3>
+          <p>To power circuits in your panel, have a licensed electrician install a transfer switch or interlock kit, with a permit where required. Otherwise, plug appliances into the generator with heavy-duty outdoor extension cords rated for the load.</p>
+        </li>
+        <li>
+          <h3>Fuel and weather</h3>
+          <p>Turn it off and let it cool before refueling. Store fuel outside living areas. In rain, keep it dry under an open canopy, never by moving it indoors.</p>
+        </li>
+      </ul>
+      <p class="sources">Sources: <a href="https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-during-a-power-outage.html" rel="noopener">CDC, power outage safety</a> · <a href="https://www.cpsc.gov/safety-education/safety-guides/carbon-monoxide/portable-generator-hazards" rel="noopener">CPSC, portable generator hazards</a>. This page does not give electrical installation advice.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="section wrap faq-layout" aria-labelledby="faq-title">
+    <div class="section-head">
+      <p class="eyebrow">Questions people ask</p>
+      <h2 id="faq-title">Generator size FAQ</h2>
+      <p>Straight answers, worked out with the same numbers as the calculator.</p>
+    </div>
+    <div class="faq">
+      <details class="faq-item" id="faq-fridge">
+        <summary><h3>What size generator do I need to run a fridge?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>A typical fridge runs on about 200&nbsp;W but needs about 1,200&nbsp;W for a second or two when its compressor starts. On its own, that means a generator label showing at least 300&nbsp;W running and 1,200&nbsp;W starting. Add a freezer, LED lights, Wi-Fi and a phone charger and it comes to 485&nbsp;W running and 1,485&nbsp;W at peak: at least 700&nbsp;W running and 1,500&nbsp;W starting. Check the starting number on the label, because some small generators start less than that. Older fridges can need more to start.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-house">
+        <summary><h3>What size generator do I need to run a house?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>It depends on what you run at the same time, not on the size of the house. Outage essentials (fridge, freezer, LED lights, Wi-Fi, phone charging, a CPAP and a sump pump) come to 1,345&nbsp;W running and 2,345&nbsp;W at peak: at least 1,700&nbsp;W running and 2,400&nbsp;W starting. Add a furnace fan, a well pump and a microwave and it’s 3,945&nbsp;W running and 5,045&nbsp;W at peak: at least 5,000&nbsp;W running and 5,100&nbsp;W starting. Central air, an electric range, a dryer or an electric water heater can push you past the biggest common portables, which run about 12,000 to 16,000&nbsp;W. That is home standby size, so have a licensed electrician size and install it.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-rv">
+        <summary><h3>What size generator do I need for a 30 amp RV?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>A 30 amp RV hookup can deliver up to 3,600&nbsp;W (30&nbsp;amps × 120&nbsp;volts). Most 30 amp rigs have one air conditioner, and its start is the hard part: about 1,600&nbsp;W running but about 3,500&nbsp;W to start. The AC plus LED lights, a TV, a laptop and a phone charger comes to 1,870&nbsp;W running and 3,770&nbsp;W at peak: at least 2,400&nbsp;W running and 3,800&nbsp;W starting. Many “2,000&nbsp;W” inverters start at about 2,000&nbsp;W, so one alone won’t start that AC. A soft start fitted to the AC lowers its starting kick. If you have one, add the AC as your own item with its new numbers.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-outage">
+        <summary><h3>How many watts do I need to run a house during a power outage?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>Count only what runs at the same time. Typical outage essentials: a fridge about 200&nbsp;W, a freezer 180&nbsp;W, LED lights 80&nbsp;W, Wi-Fi 15&nbsp;W, phone charging 10&nbsp;W, a CPAP 60&nbsp;W and a sump pump 800&nbsp;W. That is 1,345&nbsp;W running. Then add the single biggest starting kick, here the fridge at 1,000&nbsp;W extra, for a 2,345&nbsp;W peak. Start the biggest motor first, then switch the rest on one at a time.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-pumps">
+        <summary><h3>What size generator do I need for a sump pump or a well pump?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>A typical sump pump runs on about 800&nbsp;W and needs about 1,300&nbsp;W to start: at least 1,000&nbsp;W running and 1,300&nbsp;W starting. A typical well pump runs on about 1,000&nbsp;W and needs about 2,100&nbsp;W to start: at least 1,300&nbsp;W running and 2,100&nbsp;W starting. Both together need at least 2,300&nbsp;W running and 2,900&nbsp;W starting. Pumps vary, and older ones can need more to start, so check the label. Many well pumps run on 240&nbsp;volts and are hardwired, which means a generator with a 240&nbsp;V outlet and a transfer switch or interlock installed by an electrician.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-station">
+        <summary><h3>How long will a portable power station run a CPAP or a fridge?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>Runtime is capacity × about 85% ÷ load. A 1,024&nbsp;Wh power station runs a 60&nbsp;W CPAP for about 14&nbsp;h 30&nbsp;min, or a fridge drawing 200&nbsp;W nonstop for about 4&nbsp;h 20&nbsp;min. Fridges cycle on and off, so real runtime is usually longer. Turning off a CPAP’s heated humidifier usually stretches runtime a lot. The station must also handle the start: a fridge needs about 1,200&nbsp;W for a moment, so check its surge rating.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-kick">
+        <summary><h3>Why add only the biggest starting watts, not all of them?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>Starting kicks last a second or two, and motors rarely start at the exact same moment. Adding every kick would size for a moment that rarely happens. The catch: two motors can occasionally start together, like a fridge and a sump pump. If your generator trips when that happens, give yourself more starting headroom, or stagger what you can.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <a class="dock" id="dock" href="#plan">
+    <span class="dock-main">
+      <span class="dock-k">Size to buy</span>
+      <span class="dock-v" id="dock-v"></span>
+    </span>
+    <span class="dock-go"><span id="dock-hint">See plan</span><svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg></span>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span id="toast-text"></span>
+    <button type="button" class="toast-btn" id="toast-undo" hidden>Undo</button>
+  </div>
+
+  <p class="visually-hidden" id="announce" aria-live="polite" aria-atomic="true"></p>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="foot-brand"><span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-zap"/></svg></span>Generator Size Calculator</p>
+    <p>Typical watts for planning. Real appliances vary, so check the label. This is general information, not electrical advice. Anything connected to home wiring is a job for a licensed electrician.</p>
+    <p>Privacy: this page sets no cookies, runs no analytics and sends nothing you type anywhere. A shared plan link carries your list inside the link itself.</p>
+    <p>By the maker of <a href="https://apps.apple.com/app/id6803647183">Generator Wattage Calculator</a> for iPhone. iPhone and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. Icons by Lucide (ISC). Type set in Inter (SIL Open Font License). <a href="assets/LICENSES.txt">Licenses</a>.</p>
+  </div>
+</footer>
+
+
+<section class="print-sheet" id="print-sheet" aria-hidden="true"></section>
+</body>
+</html>
