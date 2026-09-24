@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sitisambal.github.io/generator-size-calculator/sitemap.xml
+Sitemap: https://generatorsizes.com/sitemap.xml
