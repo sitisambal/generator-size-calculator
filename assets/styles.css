@@ -3017,3 +3017,12 @@ details[open] > summary .chev {
     font-size: 9pt;
   }
 }
+
+/* EX-022 cross-site strip */
+.xsite { margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--line); }
+.xsite-title { margin: 0 0 4px; color: var(--text); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.xsite ul { display: flex; flex-wrap: wrap; gap: 0 20px; margin: 0; padding: 0; list-style: none; }
+.xsite a { display: inline-block; padding-block: 4px; color: var(--muted); text-decoration: none; }
+.xsite a:hover, .xsite a:focus-visible { color: var(--amber-hi); text-decoration: underline; }
+.xsite-title a, .xsite-title a:hover, .xsite-title a:focus-visible { display: inline; min-height: 0; padding: 0; color: inherit; }
+.xsite-title a:hover, .xsite-title a:focus-visible { text-decoration: underline; }
