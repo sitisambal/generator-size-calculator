@@ -303,9 +303,22 @@ h4 {
   }
 }
 
-@media (max-width: 379px) {
+@media (max-width: 429px) {
   .brand-name span {
     display: none;
+  }
+}
+
+@media (max-width: 359px) {
+  .brand {
+    gap: 8px;
+    font-size: 14px;
+  }
+  .nav {
+    gap: 0;
+  }
+  .nav a {
+    padding: 0 6px;
   }
 }
 
