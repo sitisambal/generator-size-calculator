@@ -39,68 +39,108 @@
 
   <!-- faq-jsonld:start -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What size generator do I need to run a fridge?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A typical fridge runs on about 200 W but needs about 1,200 W for a second or two when its compressor starts. On its own, that means a generator label showing at least 300 W running and 1,200 W starting. Add a freezer, LED lights, Wi-Fi and a phone charger and it comes to 485 W running and 1,485 W at peak: at least 700 W running and 1,500 W starting. Check the starting number on the label, because some small generators start less than that. Older fridges can need more to start."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What size generator do I need to run a house?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on what you run at the same time, not on the size of the house. Outage essentials (fridge, freezer, LED lights, Wi-Fi, phone charging, a CPAP and a sump pump) come to 1,345 W running and 2,345 W at peak: at least 1,700 W running and 2,400 W starting. Add a furnace fan, a well pump and a microwave and it’s 3,945 W running and 5,045 W at peak: at least 5,000 W running and 5,100 W starting. Central air, an electric range, a dryer or an electric water heater can push you past the biggest common portables, which run about 12,000 to 16,000 W. That is home standby size, so have a licensed electrician size and install it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What size generator do I need for a 30 amp RV?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A 30 amp RV hookup can deliver up to 3,600 W (30 amps × 120 volts). Most 30 amp rigs have one air conditioner, and its start is the hard part: about 1,600 W running but about 3,500 W to start. The AC plus LED lights, a TV, a laptop and a phone charger comes to 1,870 W running and 3,770 W at peak: at least 2,400 W running and 3,800 W starting. Many “2,000 W” inverters start at about 2,000 W, so one alone won’t start that AC. A soft start fitted to the AC lowers its starting kick. If you have one, add the AC as your own item with its new numbers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many watts do I need to run a house during a power outage?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Count only what runs at the same time. Typical outage essentials: a fridge about 200 W, a freezer 180 W, LED lights 80 W, Wi-Fi 15 W, phone charging 10 W, a CPAP 60 W and a sump pump 800 W. That is 1,345 W running. Then add the single biggest starting kick, here the fridge at 1,000 W extra, for a 2,345 W peak. Start the biggest motor first, then switch the rest on one at a time."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What size generator do I need for a sump pump or a well pump?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A typical sump pump runs on about 800 W and needs about 1,300 W to start: at least 1,000 W running and 1,300 W starting. A typical well pump runs on about 1,000 W and needs about 2,100 W to start: at least 1,300 W running and 2,100 W starting. Both together need at least 2,300 W running and 2,900 W starting. Pumps vary, and older ones can need more to start, so check the label. Many well pumps run on 240 volts and are hardwired, which means a generator with a 240 V outlet and a transfer switch or interlock installed by an electrician."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long will a portable power station run a CPAP or a fridge?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Runtime is capacity × about 85% ÷ load. A 1,024 Wh power station runs a 60 W CPAP for about 14 h 30 min, or a fridge drawing 200 W nonstop for about 4 h 20 min. Fridges cycle on and off, so real runtime is usually longer. Turning off a CPAP’s heated humidifier usually stretches runtime a lot. The station must also handle the start: a fridge needs about 1,200 W for a moment, so check its surge rating."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why add only the biggest starting watts, not all of them?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Starting kicks last a second or two, and motors rarely start at the exact same moment. Adding every kick would size for a moment that rarely happens. The catch: two motors can occasionally start together, like a fridge and a sump pump. If your generator trips when that happens, give yourself more starting headroom, or stagger what you can."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What size generator do I need to run a fridge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical fridge runs on about 200 W but needs about 1,200 W for a second or two when its compressor starts. On its own, that means a generator label showing at least 300 W running and 1,200 W starting. Add a freezer, LED lights, Wi-Fi and a phone charger and it comes to 485 W running and 1,485 W at peak: at least 700 W running and 1,500 W starting. Check the starting number on the label, because some small generators start less than that. Older fridges can need more to start."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "What size generator do I need to run a house?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on what you run at the same time, not on the size of the house. Outage essentials (fridge, freezer, LED lights, Wi-Fi, phone charging, a CPAP and a sump pump) come to 1,345 W running and 2,345 W at peak: at least 1,700 W running and 2,400 W starting. Add a furnace fan, a well pump and a microwave and it’s 3,945 W running and 5,045 W at peak: at least 5,000 W running and 5,100 W starting. Central air, an electric range, a dryer or an electric water heater can push you past the biggest common portables, which run about 12,000 to 16,000 W. That is home standby size, so have a licensed electrician size and install it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size generator do I need for a 30 amp RV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 30 amp RV hookup can deliver up to 3,600 W (30 amps × 120 volts). Most 30 amp rigs have one air conditioner, and its start is the hard part: about 1,600 W running but about 3,500 W to start. The AC plus LED lights, a TV, a laptop and a phone charger comes to 1,870 W running and 3,770 W at peak: at least 2,400 W running and 3,800 W starting. Many “2,000 W” inverters start at about 2,000 W, so one alone won’t start that AC. A soft start fitted to the AC lowers its starting kick. If you have one, add the AC as your own item with its new numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many watts do I need to run a house during a power outage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Count only what runs at the same time. Typical outage essentials: a fridge about 200 W, a freezer 180 W, LED lights 80 W, Wi-Fi 15 W, phone charging 10 W, a CPAP 60 W and a sump pump 800 W. That is 1,345 W running. Then add the single biggest starting kick, here the fridge at 1,000 W extra, for a 2,345 W peak. Start the biggest motor first, then switch the rest on one at a time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size generator do I need for a sump pump or a well pump?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical sump pump runs on about 800 W and needs about 1,300 W to start: at least 1,000 W running and 1,300 W starting. A typical well pump runs on about 1,000 W and needs about 2,100 W to start: at least 1,300 W running and 2,100 W starting. Both together need at least 2,300 W running and 2,900 W starting. Pumps vary, and older ones can need more to start, so check the label. Many well pumps run on 240 volts and are hardwired, which means a generator with a 240 V outlet and a transfer switch or interlock installed by an electrician."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will a portable power station run a CPAP or a fridge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Runtime is capacity × about 85% ÷ load. A 1,024 Wh power station runs a 60 W CPAP for about 14 h 30 min, or a fridge drawing 200 W nonstop for about 4 h 20 min. Fridges cycle on and off, so real runtime is usually longer. Turning off a CPAP’s heated humidifier usually stretches runtime a lot. The station must also handle the start: a fridge needs about 1,200 W for a moment, so check its surge rating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why add only the biggest starting watts, not all of them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Starting kicks last a second or two, and motors rarely start at the exact same moment. Adding every kick would size for a moment that rarely happens. The catch: two motors can occasionally start together, like a fridge and a sump pump. If your generator trips when that happens, give yourself more starting headroom, or stagger what you can."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an app that tells me what my generator can run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Generator Wattage Calculator for iPhone uses the same figures and math as this page. Tap the things you plan to plug in and it tells you whether your generator can run them all, including the starting kick. It works offline, so it is there during an outage, at the campsite or on a job site. A complete result for up to 4 items is free, and larger lists use a one-time US$2.99 Full plan purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size generator do I need for a 50 amp RV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 50 amp RV hookup can deliver up to 12,000 W (50 amps × 240 volts), but you only need to cover what you run at the same time. Two RV air conditioners plus LED lights, a TV, a laptop and a phone charger come to 3,470 W running and 5,370 W at peak: at least 4,400 W running and 5,400 W starting. Start one air conditioner at a time, and add anything else you run, such as a microwave or a coffee maker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a 5,000 watt generator run a house?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can run the outage essentials and a bit more, but not the whole house. Fridge, freezer, LED lights, Wi-Fi, phone charging, a CPAP, a sump pump, a furnace fan, a well pump and a microwave come to 3,945 W running and 5,045 W at peak, which needs a generator that runs at least 5,000 W and starts at least 5,100 W. Central air, an electric range, a dryer or an electric water heater will not fit on top. Check the running number on the label, because some generators are named for their starting watts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 80% rule for generators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep the load you run for hours at or under about 80% of the generator's running watts. That leaves headroom for a motor start and keeps the generator from running flat out. It is how this calculator picks the size to buy: your running watts divided by 0.8, rounded up to the next 100 W."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What will a 10,000 watt generator run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using the 80% rule, a generator that runs 10,000 W can carry about 8,000 W for long runs. For example: the outage essentials plus a furnace fan, a well pump, a microwave, a space heater, an electric kettle and a small window AC come to 7,245 W running and 8,445 W at peak, which needs at least 9,100 W running and 9,100 W starting. Central air or an electric range usually means a standby generator sized by an electrician."
+      }
+    }
+  ]
+}
   </script>
   <!-- faq-jsonld:end -->
 </head>
@@ -555,6 +595,36 @@
         <summary><h3>Why add only the biggest starting watts, not all of them?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
         <div class="faq-a">
           <p>Starting kicks last a second or two, and motors rarely start at the exact same moment. Adding every kick would size for a moment that rarely happens. The catch: two motors can occasionally start together, like a fridge and a sump pump. If your generator trips when that happens, give yourself more starting headroom, or stagger what you can.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-app">
+        <summary><h3>Is there an app that tells me what my generator can run?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>Yes. Generator Wattage Calculator for iPhone uses the same figures and math as this page. Tap the things you plan to plug in and it tells you whether your generator can run them all, including the starting kick. It works offline, so it is there during an outage, at the campsite or on a job site. A complete result for up to 4 items is free, and larger lists use a one-time US$2.99 Full plan purchase. <a href="https://apps.apple.com/app/apple-store/id6803647183?pt=129249633&amp;ct=seo_gwc_gs_faq&amp;mt=8">Generator Wattage Calculator on the App Store</a>.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-rv50">
+        <summary><h3>What size generator do I need for a 50 amp RV?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>A 50 amp RV hookup can deliver up to 12,000&nbsp;W (50 amps × 240 volts), but you only need to cover what you run at the same time. Two RV air conditioners plus LED lights, a TV, a laptop and a phone charger come to 3,470&nbsp;W running and 5,370&nbsp;W at peak: at least 4,400&nbsp;W running and 5,400&nbsp;W starting. Start one air conditioner at a time, and add anything else you run, such as a microwave or a coffee maker.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-5000">
+        <summary><h3>Will a 5,000 watt generator run a house?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>It can run the outage essentials and a bit more, but not the whole house. Fridge, freezer, LED lights, Wi-Fi, phone charging, a CPAP, a sump pump, a furnace fan, a well pump and a microwave come to 3,945&nbsp;W running and 5,045&nbsp;W at peak, which needs a generator that runs at least 5,000&nbsp;W and starts at least 5,100&nbsp;W. Central air, an electric range, a dryer or an electric water heater will not fit on top. Check the running number on the label, because some generators are named for their starting watts.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-80">
+        <summary><h3>What is the 80% rule for generators?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>Keep the load you run for hours at or under about 80% of the generator’s running watts. That leaves headroom for a motor start and keeps the generator from running flat out. It is how this calculator picks the size to buy: your running watts divided by 0.8, rounded up to the next 100&nbsp;W.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-10000">
+        <summary><h3>What will a 10,000 watt generator run?</h3><svg class="ico chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+        <div class="faq-a">
+          <p>Using the 80% rule, a generator that runs 10,000&nbsp;W can carry about 8,000&nbsp;W for long runs. For example: the outage essentials plus a furnace fan, a well pump, a microwave, a space heater, an electric kettle and a small window AC come to 7,245&nbsp;W running and 8,445&nbsp;W at peak, which needs at least 9,100&nbsp;W running and 9,100&nbsp;W starting. Central air or an electric range usually means a standby generator sized by an electrician.</p>
         </div>
       </details>
     </div>
